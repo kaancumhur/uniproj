@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Blockchain | Uni402</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">U4</div>
+                    <div class="logo-text">
+                        <div class="logo-title">Uni402</div>
+                        <div class="logo-subtitle">Pay-per-knowledge</div>
+                    </div>
+                </a>
+                
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Lessons
+                    </a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="connect-btn">
+                        <i class="fas fa-wallet"></i>
+                        <span class="btn-text">Connect Wallet</span>
+                        <span class="btn-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="lesson-view-container">
+        <div class="container">
+            <div class="lesson-view-header">
+                <div class="lesson-view-info">
+                    <h1 class="lesson-view-title" id="lesson-title">Introduction to Blockchain Technology</h1>
+                    
+                    <div class="lesson-view-meta">
+                        <span class="lesson-view-price" id="lesson-price">0.02 USDC</span>
+                        <span class="lesson-view-type" id="lesson-type">
+                            <i class="fas fa-file-alt"></i>
+                            Text Article
+                        </span>
+                        <div class="lesson-view-author">
+                            <div class="author-large">JD</div>
+                            <span>John Doe • Published 2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lesson-view-actions">
+                    <button class="btn-primary" id="unlock-lesson">
+                        <i class="fas fa-lock-open"></i>
+                        <span class="btn-text">Unlock Lesson</span>
+                        <span class="btn-glow"></span>
+                        <span class="btn-sparkle"></span>
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-bookmark"></i>
+                        <span class="btn-text">Save for Later</span>
+                        <span class="btn-border"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <p class="lesson-description-large" id="lesson-description">
+                A comprehensive introduction to blockchain technology, covering fundamental concepts, 
+                architecture, consensus mechanisms, and real-world applications. Perfect for beginners 
+                looking to understand the technology behind cryptocurrencies and decentralized systems.
+            </p>
+            
+            <div class="lesson-content-container">
+                <div class="content-locked" id="locked-content">
+                    <div class="locked-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h2>Lesson Locked</h2>
+                    <p>
+                        This lesson requires a one-time micro-payment of <strong>0.02 USDC</strong> 
+                        to unlock. Once unlocked, you'll have permanent access to this content.
+                    </p>
+                    <button class="btn-primary btn-unlock" id="unlock-lesson-btn">
+                        <i class="fas fa-lock-open"></i>
+                        <span class="btn-text">Unlock for 0.02 USDC</span>
+                        <span class="btn-glow"></span>
+                        <span class="btn-pulse"></span>
+                    </button>
+                    <p class="help-text">Payment is processed instantly on Solana network</p>
+                </div>
+                
+                <div class="content-unlocked" id="unlocked-content" style="display: none;">
+                    <div class="unlocked-header">
+                        <h2>
+                            <i class="fas fa-check-circle" style="color: var(--accent);"></i>
+                            Lesson Content
+                        </h2>
+                        <span class="unlocked-badge">
+                            <i class="fas fa-check"></i>
+                            Unlocked
+                        </span>
+                    </div>
+                    
+                    <div class="lesson-content" id="lesson-content">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lesson-info">
+                <h4><i class="fas fa-info-circle"></i> About This Lesson</h4>
+                <p>
+                    This lesson was created using the x402 protocol, which enables instant micro-payments 
+                    without registration or login. Once the transaction is confirmed on the Solana network, 
+                    content access is granted automatically and permanently.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lessons-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Related Lessons</h2>
+                <a href="index.html" class="view-all">
+                    Browse All
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <div class="lesson-header">
+                        <h3 class="lesson-title">Smart Contracts 101</h3>
+                        <span class="lesson-price">0.03 USDC</span>
+                    </div>
+                    <p class="lesson-description">
+                        Learn the basics of smart contracts and how they work on blockchain platforms.
+                    </p>
+                    <div class="lesson-footer">
+                        <div class="lesson-author">
+                            <div class="author-avatar">JD</div>
+                            <span class="author-name">John Doe</span>
+                        </div>
+                        <div class="lesson-type">
+                            <i class="fas fa-file-alt"></i>
+                            Text
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lesson-card">
+                    <div class="lesson-header">
+                        <h3 class="lesson-title">DeFi Fundamentals</h3>
+                        <span class="lesson-price">0.04 USDC</span>
+                    </div>
+                    <p class="lesson-description">
+                        Understanding decentralized finance and its applications in the crypto ecosystem.
+                    </p>
+                    <div class="lesson-footer">
+                        <div class="lesson-author">
+                            <div class="author-avatar">AS</div>
+                            <span class="author-name">Alex Smith</span>
+                        </div>
+                        <div class="lesson-type">
+                            <i class="fas fa-video"></i>
+                            Video
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lesson-card">
+                    <div class="lesson-header">
+                        <h3 class="lesson-title">NFTs Explained</h3>
+                        <span class="lesson-price">0.02 USDC</span>
+                    </div>
+                    <p class="lesson-description">
+                        Complete guide to Non-Fungible Tokens: creation, trading, and use cases.
+                    </p>
+                    <div class="lesson-footer">
+                        <div class="lesson-author">
+                            <div class="author-avatar">MJ</div>
+                            <span class="author-name">Maria Jones</span>
+                        </div>
+                        <div class="lesson-type">
+                            <i class="fas fa-file-pdf"></i>
+                            PDF
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">U4</div>
+                        <div class="logo-title">Uni402</div>
+                    </a>
+                    <p class="footer-description">
+                        The simplest way to monetize and access knowledge. 
+                        Micro-payments powered by Solana.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Platform</h3>
+                    <a href="index.html">Discover</a>
+                    <a href="#">Create</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <a href="#">Documentation</a>
+                    <a href="#">API</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Blog</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <a href="#">About</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 Uni402. All rights reserved.
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="payment-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-lock-open"></i>
+                    Confirm Payment
+                </h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="payment-details">
+                    <div class="payment-item">
+                        <span class="payment-label">Lesson:</span>
+                        <span class="payment-value" id="payment-lesson-title">Introduction to Blockchain</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">Amount:</span>
+                        <span class="payment-value" id="payment-price">0.02 USDC</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">Network Fee:</span>
+                        <span class="payment-value">0.0001 SOL</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">Recipient:</span>
+                        <span class="payment-value address">Hx402...Z9s1L3</span>
+                    </div>
+                </div>
+                
+                <div class="payment-actions">
+                    <button class="btn-pay" id="confirm-payment">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="btn-text">Confirm & Pay</span>
+                        <span class="btn-glow"></span>
+                        <span class="btn-sparkle"></span>
+                    </button>
+                    <p class="help-text">Transaction completes in under 10 seconds</p>
+                </div>
+                
+                <div class="payment-status" id="payment-status" style="display: none;">
+                    <div class="status-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Payment Successful!</h4>
+                        <p>Lesson unlocked. Refreshing content...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
