@@ -1,1 +1,369 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uni402 - Micro-payments for Knowledge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">U4</div>
+                    <div class="logo-text">
+                        <div class="logo-title">Uni402</div>
+                        <div class="logo-subtitle">Pay-per-knowledge</div>
+                    </div>
+                </a>
+                
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link active">Discover</a>
+                    <a href="#" class="nav-link">Create</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Docs</a>
+                    <a href="#" class="nav-link">About</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="connect-btn">
+                        <i class="fas fa-wallet"></i>
+                        <span class="btn-text">Connect Wallet</span>
+                        <span class="btn-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fas fa-bolt"></i>
+                <span>Instant Knowledge Access</span>
+            </div>
+            
+            <h1>
+                <span class="hero-gradient">Learn. Pay. Grow.</span><br>
+                Micro-payments for Knowledge
+            </h1>
+            
+            <p class="hero-subtitle">
+                Access premium educational content instantly with one-click micro-payments. 
+                No subscriptions, no commitments. Just pure knowledge on demand.
+            </p>
+            
+            <div class="hero-actions">
+                <button class="btn-primary" id="show-create-form">
+                    <i class="fas fa-plus-circle"></i>
+                    <span class="btn-text">Create Lesson</span>
+                    <span class="btn-glow"></span>
+                    <span class="btn-sparkle"></span>
+                </button>
+                <button class="btn-secondary">
+                    <i class="fas fa-book-open"></i>
+                    <span class="btn-text">Browse Lessons</span>
+                    <span class="btn-border"></span>
+                </button>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="lesson-count">142</div>
+                    <div class="stat-label">Lessons Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0.01-0.05</div>
+                    <div class="stat-label">USDC per Lesson</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3.2k</div>
+                    <div class="stat-label">Lessons Unlocked</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">Instant Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lessons-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Lessons</h2>
+                <a href="#" class="view-all">
+                    View All
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="lessons-grid" id="lessons-list">
+            </div>
+        </div>
+    </section>
+
+    <section class="create-section" id="create-section" style="display: none;">
+        <div class="container">
+            <div class="create-form-container">
+                <div class="form-header">
+                    <h2>Create Your Lesson</h2>
+                    <p>Share your knowledge and earn from each unlock. Simple setup, instant payments.</p>
+                </div>
+                
+                <form class="create-form" id="lesson-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="lesson-title">
+                                <i class="fas fa-heading"></i>
+                                Lesson Title
+                            </label>
+                            <input type="text" id="lesson-title" class="form-input" placeholder="Introduction to Blockchain" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lesson-price">
+                                <i class="fas fa-tag"></i>
+                                Price (USDC)
+                            </label>
+                            <select id="lesson-price" class="form-input form-select">
+                                <option value="0.01">$0.01</option>
+                                <option value="0.02" selected>$0.02</option>
+                                <option value="0.03">$0.03</option>
+                                <option value="0.04">$0.04</option>
+                                <option value="0.05">$0.05</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="lesson-description">
+                                <i class="fas fa-align-left"></i>
+                                Description
+                            </label>
+                            <textarea id="lesson-description" class="form-input form-textarea" rows="3" placeholder="Brief description of what students will learn..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="content-type">
+                                <i class="fas fa-file-alt"></i>
+                                Content Type
+                            </label>
+                            <select id="content-type" class="form-input form-select">
+                                <option value="text">Text Article</option>
+                                <option value="video">Video Lesson</option>
+                                <option value="pdf">PDF Document</option>
+                                <option value="external_url">External Link</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lesson-tags">
+                                <i class="fas fa-tags"></i>
+                                Tags (comma separated)
+                            </label>
+                            <input type="text" id="lesson-tags" class="form-input" placeholder="blockchain, crypto, web3">
+                        </div>
+                        
+                        <div class="form-group full-width" id="content-input-container">
+                            <label for="content-data">
+                                <i class="fas fa-edit"></i>
+                                Lesson Content
+                            </label>
+                            <textarea id="content-data" class="form-input form-textarea" rows="8" placeholder="Write your lesson content here..."></textarea>
+                            <p class="help-text">For videos, paste YouTube/Vimeo URL. For PDFs, use Google Drive/Dropbox link.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" id="hide-create-form">
+                            <span class="btn-text">Cancel</span>
+                            <span class="btn-border"></span>
+                        </button>
+                        <button type="submit" class="btn-create">
+                            <i class="fas fa-save"></i>
+                            <span class="btn-text">Publish Lesson</span>
+                            <span class="btn-glow"></span>
+                            <span class="btn-sparkle"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <a href="#" class="view-all">
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="step-title">Discover</h3>
+                    <p class="step-description">
+                        Browse through thousands of lessons across various topics. Find exactly what you need to learn.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-lock-open"></i>
+                    </div>
+                    <h3 class="step-title">Unlock</h3>
+                    <p class="step-description">
+                        Click unlock and make a micro-payment. Transactions are instant and secured on Solana.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="step-title">Learn</h3>
+                    <p class="step-description">
+                        Access the full lesson immediately. No waiting, no approval process. Just pure knowledge.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="step-title">Share & Earn</h3>
+                    <p class="step-description">
+                        Create your own lessons and earn from each unlock. Share your expertise with the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">U4</div>
+                        <div class="logo-title">Uni402</div>
+                    </a>
+                    <p class="footer-description">
+                        The simplest way to monetize and access knowledge. 
+                        Micro-payments powered by Solana.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Platform</h3>
+                    <a href="#">Discover</a>
+                    <a href="#">Create</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <a href="#">Documentation</a>
+                    <a href="#">API</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Blog</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <a href="#">About</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 Uni402. All rights reserved.
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="payment-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-lock"></i>
+                    Unlock Lesson
+                </h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="payment-details">
+                    <div class="payment-item">
+                        <span class="payment-label">Lesson:</span>
+                        <span class="payment-value" id="payment-lesson-title">Introduction to Blockchain</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">Price:</span>
+                        <span class="payment-value" id="payment-price">0.02 USDC</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">Network:</span>
+                        <span class="payment-value">Solana</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">Fee:</span>
+                        <span class="payment-value">0.0001 SOL</span>
+                    </div>
+                </div>
+                
+                <div class="payment-actions">
+                    <button class="btn-pay" id="connect-phantom">
+                        <i class="fas fa-wallet"></i>
+                        <span class="btn-text">Connect Phantom Wallet</span>
+                        <span class="btn-glow"></span>
+                        <span class="btn-sparkle"></span>
+                    </button>
+                    <p class="help-text">Transaction completes in under 10 seconds</p>
+                </div>
+                
+                <div class="payment-status" id="payment-status" style="display: none;">
+                    <div class="status-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Payment Confirmed!</h4>
+                        <p>Lesson access granted. The page will refresh...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
