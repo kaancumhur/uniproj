@@ -1,0 +1,3 @@
+B:\TestJOB\WebSite\unipay-project\uniproj\uniproj\obj\Debug\uniproj.njsproj.AssemblyReference.cache
+B:\TestJOB\WebSite\unipay-project\uniproj\uniproj\obj\Debug\uniproj.njsproj.CoreCompileInputs.cache
+B:\TestJOB\WebSite\unipay-project\uniproj\uniproj\bin\Microsoft.NodejsTools.WebRole.dll
